@@ -1,8 +1,11 @@
 let allumettes = 50;
 
+const nbAllumettes = document.getElementById("nbAllumettes");
+
+
 
 function demandeJoueur(){
-    return Number(prompt("combien d'allumettes enlever?"))
+    // return Number(prompt("combien d'allumettes enlever?"))
 };
 
 function demandeVerifieNbChoisi(){
@@ -11,7 +14,7 @@ function demandeVerifieNbChoisi(){
         alert("choisis un CHIFFRE entre 1 et 6");
         nombreChoisi = demandeJoueur();
       }
-      return  nombreChoisi;
+      return nombreChoisi;
 }; 
 
 function decompteAllumettes(allumettesRestantes){
