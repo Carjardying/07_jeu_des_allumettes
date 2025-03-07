@@ -1,15 +1,12 @@
 let allumettes = 50;
 
-function nbAllumettesRestantes(nbReste) {
-    return
-};
 
 function demandeJoueur(){
     return Number(prompt("combien d'allumettes enlever?"))
 };
 
-function verifNombreChoisi(){ //code ne fonctionne pas si cette boucle est ici.
-    let nombreChoisi = demandeJoueur() ; //sûrement à cause de cette déclaration là. car si hors des fonctions, le lance et c'est tout
+function demandeVerifieNbChoisi(){
+    let nombreChoisi = demandeJoueur() ;
     while (nombreChoisi < 1 || nombreChoisi > 6) {
         alert("choisis un CHIFFRE entre 1 et 6");
         nombreChoisi = demandeJoueur();
@@ -19,7 +16,7 @@ function verifNombreChoisi(){ //code ne fonctionne pas si cette boucle est ici.
 
 function decompteAllumettes(allumettesRestantes){
     while (allumettesRestantes > 0) {
-        let allumettesEnlevees = verifNombreChoisi()
+        let allumettesEnlevees = demandeVerifieNbChoisi()
         allumettesRestantes = allumettesRestantes - allumettesEnlevees;
         alert(allumettesRestantes);  
     }
@@ -29,3 +26,6 @@ function decompteAllumettes(allumettesRestantes){
 }
 
 decompteAllumettes(allumettes);
+ 
+// ETAPE 4 : Rajouter un 2eme joueur à votre jeu. //
+// faire page html avec des balises correspondantes et les remplir pour remplacer le prompt
