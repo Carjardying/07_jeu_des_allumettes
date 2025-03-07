@@ -1,13 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matches_Game</title>
-    <script src="script.js" ></script>
+    <title>Matches_Game2</title>
+    <script defer src="script.js"></script>
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
+    <div class="navBar">
+        <a class="active" href="index.html">essai2 avec select</a>
+        <a href="index2.html">essai1 avec prompt</a>
+    </div>
+
+    <h1>Jeu des allumettes</h1>
+    <h2>Celui qui ôte la dernière allumette gagne</h2>
+    <h3 id="nbAllumettes">Allumettes restantes : 50</h3>
+    <hr>
+
+    <label for="nbChoisi">Choisis un nombre d'allumettes à retirer:</label>
+
+    <select name="nombre" id="nbChoisi">
+        <option value="">--Choisis un nombre--</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5</option>
+        <option value="6">6</option>
+    </select>
 
 </body>
 

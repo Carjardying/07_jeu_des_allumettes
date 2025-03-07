@@ -4,20 +4,24 @@ const nbAllumettes = document.getElementById("nbAllumettes");
 
 
 
-function demandeJoueur(){ //fonction pour enregistrer le nombre choisi par le joueur.
-    //selecteur de 1 à 6 (voir mdn pour syntaxe car possible bouton select)
-    return nombreChoisi
+function demandeJoueur(){
+    return Number(prompt("combien d'allumettes enlever?"))
 };
 
-// fonction qui lie le <h3> () {
-//      chope le <h3> avec getElementById et remplace son innerHTML avec la valeur de let allumettes.
-//}
+function demandeVerifieNbChoisi(){
+    let nombreChoisi = demandeJoueur() ;
+    while (nombreChoisi < 1 || nombreChoisi > 6) {
+        alert("choisis un CHIFFRE entre 1 et 6");
+        nombreChoisi = demandeJoueur();
+      }
+      return nombreChoisi;
+}; 
+
 function decompteAllumettes(allumettesRestantes){
     while (allumettesRestantes > 0) {
-        let allumettesEnlevees = nombreChoisi //nouveau nom pour appeler la valeur retournée par demandeJoueur()
+        let allumettesEnlevees = demandeVerifieNbChoisi()
         allumettesRestantes = allumettesRestantes - allumettesEnlevees;
-        //alert(allumettesRestantes) à la place : fonction qui lie le <h3>(allumettesRestantes)
-        
+        alert(allumettesRestantes);  
     }
     if (allumettesRestantes <= 0) {
      alert("Victoire")   
